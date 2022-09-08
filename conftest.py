@@ -22,9 +22,5 @@ def size_window():
 def open_browser():
     browser.open('https://google.com/ncr')
     print("Браузер открыт")
-
-
-@pytest.fixture()
-def after_end():
     yield
     print("Тест проведен")
