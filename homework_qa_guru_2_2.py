@@ -9,4 +9,6 @@ def test_positive(open_browser):
 # Негативный тест
 def test_negative(open_browser):
     browser.element('[name=q]').should(be.blank).type(';?*№%№KL$№;:*;?LL').press_enter()
-    browser.element('[id=search]').should_not(have.text(';?*№%№KL$№;:*;?LL'))
+    browser.element('[class=card-section]').should(have.text(' ничего не найдено. '))
+
+#    browser.element('[id=search]').should_not(have.text(';?*№%№KL$№;:*;?LL')) - плохой пример реализ
